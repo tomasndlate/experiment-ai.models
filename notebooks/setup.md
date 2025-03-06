@@ -52,4 +52,10 @@ Don't forget to push this new changes to github 😊
 
 Click **Select Kernel**
 
+<img width="320" alt="kernel" src="https://github.com/user-attachments/assets/b5544f1c-49e2-4d78-aa9a-459769aef8b3" />
+
 Select the .venv envirement (which contains a kernel)
+
+<img width="665" alt="select-kernel" src="https://github.com/user-attachments/assets/893a7139-7d90-42e2-8f84-e22ca44049d9" />
+
+
