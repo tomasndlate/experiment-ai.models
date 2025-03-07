@@ -61,13 +61,28 @@ Don't forget to push this new changes to github 😊
 
 Select the interpreter, use the .venv
 
+<img width="703" alt="select interpreter" src="https://github.com/user-attachments/assets/79a6e0ad-3f38-4e25-8477-811edda3d783" />
+
+<br/>
+<br/>
+<br/>
+
 ## Environment Variables
 
 ### Create .env file
 
-This file is going to save secrets locally - not update to github
+This file is going to save secrets locally - not update to github. Create under the **src/** folder.
 
-Needed secrets:
+<img width="266" alt="env file" src="https://github.com/user-attachments/assets/2cd971a8-1fb0-4308-a7e7-42fede8c8301" />
 
-KAGGLE_USERNAME=value
-KAGGLE_KEY=value
+<br/>
+
+### Add Secrets
+
+This are the needed secrets:
+
+```
+KAGGLE_USERNAME=<value>
+KAGGLE_KEY=<value>
+```
+
