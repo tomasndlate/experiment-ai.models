@@ -13,8 +13,7 @@ OPTIONS_RESPONSE = {
 }
 
 MODEL_PATHS = {
-    "model_A": "model_A.joblib",
-    "model_B": "model_B.joblib"
+    "model_A": "model_A.joblib"
 }
 loaded_models = {}
 

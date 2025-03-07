@@ -1,2 +1,5 @@
+.env
 .venv
 *.code-workspace
+*.joblib
+*.pkl
