@@ -3,3 +3,7 @@
 *.code-workspace
 *.joblib
 *.pkl
+*.csv
+*.tfstate
+.terraform
+.terraform.lock.hcl

@@ -13,7 +13,7 @@ OPTIONS_RESPONSE = {
 }
 
 MODEL_PATHS = {
-    "model_A": "model_A.joblib"
+    "model_spam_detector": "models/spam_model_pipeline.joblib"
 }
 loaded_models = {}
 
@@ -23,8 +23,10 @@ def get_model(model_name):
     global loaded_models
     if model_name not in loaded_models:
         if model_name not in MODEL_PATHS:
+            print(f"Model {model_name} not found")
             return None
         loaded_models[model_name] = joblib.load(MODEL_PATHS[model_name])
+        print(f"Model {model_name} loaded")
 
     return loaded_models[model_name]
 
@@ -52,7 +54,13 @@ def handler(event, context):
         return OPTIONS_RESPONSE
 
     try:
-        body = json.loads(event.get("body", "{}"))  
+        # Body from API Gateway vs Local postman
+        if isinstance(event, dict) and "body" in event: # API Gateway
+            body = event.get("body", "{}") if isinstance(event["body"], dict) else json.loads(event.get("body", "{}"))
+        else: # Local postman
+            body = event if isinstance(event, dict) else json.loads(event)
+
+        body = json.loads(event.get("body", "{}")) if "body" in event else json.loads(event)
 
         model_name = body.get("model_name", "")
         text = body.get("text", "")
